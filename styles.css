@@ -1,0 +1,128 @@
+
+/**********************************************
+Root variables
+**********************************************/
+:root {
+    --clr-def: #fff;
+    --clr-accent: #4D8580;
+    --clr-accent-light: #81BAB5;
+    --clr-grey: #95989A;
+    --clr-bg-accent: #D9F0E6;
+    --clr-bg-light: #373737;
+    --clr-bg-middle: #2D2D2D;
+    --clr-bg-dark: #272727;
+
+    --ff-def: 'Lato', sans-serif;
+    --ff-header: 'Anton', sans-serif;
+    --ff-subHeader: 'Fjalla One', sans-serif;
+    --ff-cta: 'Merriweather', serif;
+
+    --fw-100: 100;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-600: 700;
+    --fw-800: 900;
+}
+
+
+
+/**********************************************
+Global styles
+**********************************************/
+/* Box sizing rules -- Suggested by Andy Bell - https://andy-bell.co.uk/a-modern-css-reset/ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin -- Suggested by Andy Bell - https://andy-bell.co.uk/a-modern-css-reset/ */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+/* Sections */
+header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh; /* Suggested by Kevin Powell - https://www.youtube.com/@KevinPowell */
+    background-color: var(--clr-bg-dark);
+    font-family: var(--ff-def);
+    color: var(--clr-def);
+    display: grid;
+    grid-template-areas: auto 1fr auto;
+}
+
+header,
+footer {
+    background-color: var(--clr-bg-middle);
+    padding: 1rem 0;
+}
+
+main {
+    max-width: 1170px;
+    margin: 0 auto;
+    background-color: var(--clr-bg-light);
+}
+
+
+/* Elements */
+h1 {
+    font-family: var(--ff-header);
+    font-size: 4rem;
+}
+
+h2 {
+    font-family: var(--ff-subHeader);
+    font-size: 2rem;
+}
+
+h3 {
+    font-weight: var(--fw-800);
+    font-size: 1,25rem;
+}
+
+img { /* Suggested by Kevin Powell - https://www.youtube.com/@KevinPowell */
+    display: block;
+    max-width: 100%;
+}
+
+
+/* Classes */
+.cta h2 {
+    font-family: var(--ff-cta);
+    font-size: 2.5rem;
+}
+
+
+
+/**********************************************
+Home page
+**********************************************/
+
+
+
+/**********************************************
+Media queries
+**********************************************/
+
+/* TODO: 
+    main: 
+        max-width on desktop: max-width: 1170px;
+        max-width on mobile: max-width: 100%;
+ */
