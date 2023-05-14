@@ -10,7 +10,7 @@ Root variables
 	--clr-bg-light: #373737;
 	--clr-bg-middle: #2d2d2d;
 	--clr-bg-dark: #272727;
-	--clr-transparent: hsl(120deg 75% 25% / 0.0);
+	--clr-transparent: hsl(120deg 75% 25% / 0);
 
 	--ff-def: "Lato", sans-serif;
 	--ff-header: "Anton", sans-serif;
@@ -82,14 +82,14 @@ main {
 }
 
 nav li {
-    list-style: none;
+	list-style: none;
 }
 
 nav a {
 	display: block;
 	text-transform: uppercase;
 	text-decoration: none;
-	color: var(--clr-def)
+	color: var(--clr-def);
 }
 
 nav a:is(:hover, :active) {
@@ -101,6 +101,7 @@ h1 {
 	font-family: var(--ff-header);
 	font-size: 4rem;
 	text-transform: uppercase;
+	letter-spacing: 3px;
 }
 
 h2 {
@@ -121,13 +122,17 @@ img {
 
 /* ----------IDs---------- */
 #checkout {
-	gap: 0 !important;
-	border: solid var(--clr-transparent) 3px;
+	margin-left: 3rem;
+	border: solid var(--clr-transparent) 2px;
 	border-radius: 6px;
 }
 
 #checkout:is(:hover, :active) {
 	border-color: var(--clr-def);
+}
+
+#checkout a {
+	gap: 0 !important;
 }
 
 #checkout a:is(:hover, :active) {
@@ -139,13 +144,13 @@ img {
 }
 
 #checkout div {
-	padding: 0.5rem;
+	padding: 0.25rem 0.5rem;
 }
 
 #checkout div:first-of-type {
 	border-radius: 6px 0 0 6px;
 	background-color: var(--clr-def);
-	color: var(--clr-grey);	
+	color: var(--clr-grey);
 	max-width: fit-content;
 	margin-right: 0;
 }
@@ -153,9 +158,15 @@ img {
 #checkout div:last-of-type {
 	border-radius: 0 6px 6px 0;
 	background-color: var(--clr-accent);
-	color: var(--clr-def);	
+	color: var(--clr-def);
 	max-width: fit-content;
 	margin-left: 0;
+}
+
+#checkout p::before {
+	font: var(--fa-font-solid);
+	content: "\f07a";
+	margin-right: 0.5rem;
 }
 
 /* ----------Classes---------- */
@@ -219,7 +230,11 @@ img {
 	transform: skewY(5deg);
 }
 
-/* how do I make a section with a diagonal background at the top, and a straight background at the bottom? */
+.icon::before {
+	display: inline-block;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
 
 /**********************************************
 Home page
