@@ -22,7 +22,7 @@
 	<body>
 		<!-- ----------Start of header---------- -->
 		<header>
-			<nav class="container marker">
+			<nav class="container">
 				<div class="flex flex--space-between">
 					<a href="index.html"
 						><img src="img/RainyDays_logo.svg" alt="Logo for Rainy Days"
@@ -35,7 +35,9 @@
 						<li>
 							<div id="checkout" class="flex">
 								<a href="checkout.html" class="flex">
-									<div><p class="icon">3</p></div>
+									<div>
+										<p class="icon" aria-label="Items in your cart">3</p>
+									</div>
 									<div>Check out</div>
 								</a>
 							</div>
@@ -48,18 +50,24 @@
 		<!-- ----------Start of main---------- -->
 		<main>
 			<section id="hero" class="marker">
-				<h1>Durable rain jackets</h1>
+				<h1>
+					Durable<br />
+					rain jackets
+				</h1>
 				<h2>Pushing the comfort zone</h2>
-				<div class="cta diagonal">
-					<h2>Simply better</h2>
-					<p>
-						Rainy Days products stand out from the competition because we
-						prioritize durability, versatility, and comfort - without breaking
-						the bank. Our jackets are designed to withstand a range of weather
-						conditions, making them suitable for a variety of outdoor
-						activities. With our focus on quality and affordability, we make it
-						easy for you to explore the great outdoors in style and comfort.
-					</p>
+				<div class="diagonal">
+					<div class="cta">
+						<h2>Simply better</h2>
+						<p>
+							Rainy Days products stand out from the competition because we
+							prioritize durability, versatility, and comfort - without breaking
+							the bank. Our jackets are designed to withstand a range of weather
+							conditions, making them suitable for a variety of outdoor
+							activities. With our focus on quality and affordability, we make
+							it easy for you to explore the great outdoors in style and
+							comfort.
+						</p>
+					</div>
 				</div>
 			</section>
 			<section id="featured" class="marker"></section>
@@ -70,7 +78,63 @@
 
 		<!-- ----------Start of footer---------- -->
 		<footer>
-			<div class="container marker"></div>
+			<div class="container footer-grid">
+				<div id="footer-logo">
+					<img src="img/RainyDays_logo.svg" alt="Logo for Rainy Days" />
+				</div>
+				<div id="footer-about">
+					<p>
+						With a focus on durability and versatility, our jackets are
+						engineered to withstand various weather conditions, ensuring you
+						remain comfortable during your adventures.
+					</p>
+				</div>
+				<nav id="footer-nav">
+					<h2>Browse</h2>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="productsMen.html">Collection</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				<nav id="footer-help">
+					<h2>Support</h2>
+					<ul>
+						<li><a href="#">Size guide</a></li>
+						<li><a href="#">Shipping</a></li>
+						<li><a href="#">Return policy</a></li>
+						<li><a href="#">Terms and conditions</a></li>
+					</ul>
+				</nav>
+				<div id="footer-contact">
+					<h2 id="footer-contact-h2">Contact</h2>
+					<ul>
+						<li id="footer-phone"><a href="tel:#">+44 456 678 903</a></li>
+						<li id="footer-email"><a href="mailto:#">hey@rainydays.com</a></li>
+						<li>
+							<div class="flex flex--left">
+								<a href="#">
+									<i
+										class="fa-brands fa-instagram fa-2xl"
+										aria-label="Link to Rainy Days' Instagram channel"></i>
+								</a>
+								<a href="#">
+									<i
+										class="fa-brands fa-facebook-f fa-2xl"
+										aria-label="Link to Rainy Days' Facebook page"></i>
+								</a>
+								<a href="#">
+									<i
+										class="fa-brands fa-twitter fa-2xl"
+										aria-label="Link to Rainy Days' Twitter profile"></i>
+								</a>
+							</div>
+						</li>
+					</ul>
+					<div class="flex"></div>
+				</div>
+			</div>
 			<p class="copyright">&copy 2023 Rainy Days</p>
 		</footer>
 	</body>
