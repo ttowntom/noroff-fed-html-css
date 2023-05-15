@@ -146,38 +146,58 @@ img {
 	max-width: 100%;
 }
 
-i {
-	margin-top: 2rem;
+/* ----------IDs---------- */
+
+#menu-toggle {
+	display: none;
 }
 
-/* ----------IDs---------- */
-#checkout {
+/* #menu-toggle:checked ~ #hamburger-menu {
+	display: block;
+} */
+
+#checkout,
+#checkout-mobile {
 	margin-left: 3rem;
 	border: solid var(--clr-transparent) 2px;
 	border-radius: 6px;
 }
 
-#checkout:is(:hover, :active) {
+#checkout:is(:hover, :active),
+#checkout-mobile:is(:hover, :active) {
 	border-color: var(--clr-def);
 }
 
-#checkout a {
+#checkout a,
+#checkout-mobile a {
 	gap: 0 !important;
-}
-
-#checkout a:is(:hover, :active) {
 	text-decoration: none;
 }
 
-#checkout > * {
+#checkout a:is(:hover, :active),
+#checkout-mobile a:is(:hover, :active) {
+	text-decoration: none;
+}
+
+#checkout p,
+#checkout-mobile p {
 	font-weight: var(--fw-800);
 }
 
-#checkout div {
+#checkout p:before,
+#checkout-mobile p::before {
+	font: var(--fa-font-solid);
+	content: "\f07a";
+	margin-right: 0.5rem;
+}
+
+#checkout div,
+#checkout-mobile div {
 	padding: 0.25rem 0.5rem;
 }
 
-#checkout div:first-of-type {
+#checkout div:first-of-type,
+#checkout-mobile div:first-of-type {
 	border-radius: 6px 0 0 6px;
 	background-color: var(--clr-def);
 	color: var(--clr-grey);
@@ -185,18 +205,13 @@ i {
 	margin-right: 0;
 }
 
-#checkout div:last-of-type {
+#checkout div:last-of-type,
+#checkout-mobile div:last-of-type {
 	border-radius: 0 6px 6px 0;
 	background-color: var(--clr-accent);
 	color: var(--clr-def);
 	max-width: fit-content;
 	margin-left: 0;
-}
-
-#checkout p::before {
-	font: var(--fa-font-solid);
-	content: "\f07a";
-	margin-right: 0.5rem;
 }
 
 #footer-logo {
@@ -219,6 +234,10 @@ i {
 
 #footer-contact {
 	grid-area: footer-contact;
+}
+
+#footer-contact i {
+	margin-top: 2rem;
 }
 
 /* ----------Classes---------- */
@@ -303,6 +322,10 @@ Media queries
 **********************************************/
 /* ----------Mobile---------- */
 @media (max-width: 766px) {
+	#menu-desktop {
+		display: none;
+	}
+
 	#footer-about,
 	#footer-phone,
 	#footer-email,
@@ -343,6 +366,10 @@ Media queries
 
 /* ----------Tablet + Desktop---------- */
 @media (min-width: 767px) {
+	#menu-mobile {
+		display: none;
+	}
+
 	main,
 	.container {
 		width: 100%;

@@ -22,11 +22,33 @@
 	<body>
 		<!-- ----------Start of header---------- -->
 		<header>
-			<nav class="container">
+			<!-- ----------Start of hamburger menu---------- -->
+
+			<div id="menu-mobile" class="container flex flex--space-between">
+				<a href="index.html"
+					><img src="img/RainyDays_logo.svg" alt="Logo for Rainy Days"
+				/></a>
+				<div id="checkout-mobile" class="checkout">
+					<a href="checkout.html" class="flex">
+						<div>
+							<p class="icon" aria-label="Items in your cart">3</p>
+						</div>
+						<div>
+							<input type="checkbox" id="menu-toggle" />
+							<label for="menu-toggle" id="menu-toggle-label">
+								<i class="fas fa-bars fa-lg"></i
+							></label>
+						</div>
+					</a>
+				</div>
+			</div>
+			<!-- ----------End of hamburger menu---------- -->
+			<nav id="menu-desktop" class="container">
 				<div class="flex flex--space-between">
 					<a href="index.html"
 						><img src="img/RainyDays_logo.svg" alt="Logo for Rainy Days"
 					/></a>
+
 					<ul class="flex">
 						<li><a href="index.html" class="current">Home</a></li>
 						<li><a href="productsMen.html">Collection</a></li>
