@@ -5,6 +5,7 @@ Root variables
 	--clr-def: #fff;
 	--clr-accent: #4d8580;
 	--clr-accent-light: #81bab5;
+	--clr-accent-lighter: #d9f0e6;
 	--clr-grey: #95989a;
 	--clr-bg-accent: #d9f0e6;
 	--clr-bg-light: #373737;
@@ -146,74 +147,67 @@ img {
 	max-width: 100%;
 }
 
-/* ----------IDs---------- */
-
-#menu-toggle {
-	display: none;
-}
-
-/* #menu-toggle:checked ~ #hamburger-menu {
-	display: block;
-} */
-
-#checkout,
-#checkout-mobile {
-	margin-left: 3rem;
-	border: solid var(--clr-transparent) 2px;
+/* ----------Cart / Checkout / Hamburger menu---------- */
+.checkout-wrapper {
+	display: grid;
+	grid-template-columns: max-content max-content;
 	border-radius: 6px;
+	border: solid var(--clr-transparent) 2px;
+	gap: 0;
 }
 
-#checkout:is(:hover, :active),
-#checkout-mobile:is(:hover, :active) {
+.checkout-wrapper:is(:hover, :active) {
 	border-color: var(--clr-def);
 }
 
-#checkout a,
-#checkout-mobile a {
-	gap: 0 !important;
-	text-decoration: none;
+.checkout--sidecart button {
+	border: 0;
+	color: var(--clr-def);
+	background: none;
+	cursor: pointer;
 }
 
-#checkout a:is(:hover, :active),
-#checkout-mobile a:is(:hover, :active) {
-	text-decoration: none;
+.checkout--sidecart button:is(:hover, :active),
+.checkout--cart a:is(:hover, :active),
+.sidecart--link:is(:hover, :active) {
+	color: var(--clr-bg-middle);
 }
 
-#checkout p,
-#checkout-mobile p {
-	font-weight: var(--fw-800);
+.checkout--cart {
+	padding: 0.25rem 0.5rem;
+	background-color: var(--clr-def);
+	border-radius: 6px 0 0 6px;
+	color: var(--clr-grey);
 }
 
-#checkout p:before,
-#checkout-mobile p::before {
+.checkout--cart a:before {
 	font: var(--fa-font-solid);
 	content: "\f07a";
 	margin-right: 0.5rem;
 }
 
-#checkout div,
-#checkout-mobile div {
-	padding: 0.25rem 0.5rem;
-}
-
-#checkout div:first-of-type,
-#checkout-mobile div:first-of-type {
-	border-radius: 6px 0 0 6px;
-	background-color: var(--clr-def);
+.checkout--sidecart a,
+.checkout--sidecart--mobile a,
+.checkout--cart a {
+	text-decoration: none;
+	text-transform: uppercase;
 	color: var(--clr-grey);
-	max-width: fit-content;
-	margin-right: 0;
+	font-weight: var(--fw-800);
 }
 
-#checkout div:last-of-type,
-#checkout-mobile div:last-of-type {
-	border-radius: 0 6px 6px 0;
-	background-color: var(--clr-accent);
+.checkout--sidecart a,
+.checkout--sidecart--mobile a {
 	color: var(--clr-def);
-	max-width: fit-content;
-	margin-left: 0;
 }
 
+.checkout--sidecart,
+.checkout--sidecart--mobile {
+	padding: 0.25rem;
+	background-color: var(--clr-accent);
+	border-radius: 0 6px 6px 0;
+}
+
+/* ----------IDs---------- */
 #footer-logo {
 	grid-area: footer-logo;
 	margin: 1.5rem 0;
@@ -256,6 +250,10 @@ img {
 	gap: 1rem;
 	justify-content: center;
 	align-items: center;
+}
+
+.flex--column {
+	flex-direction: column;
 }
 
 .flex--left {
@@ -307,12 +305,6 @@ img {
 	transform: skewY(5deg);
 }
 
-.icon::before {
-	display: inline-block;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-}
-
 /**********************************************
 Home page
 **********************************************/
@@ -322,8 +314,14 @@ Media queries
 **********************************************/
 /* ----------Mobile---------- */
 @media (max-width: 766px) {
-	#menu-desktop {
+	#nav--desktop,
+	#nav--mobile[data-visible="false"],
+	.checkout--sidecart a {
 		display: none;
+	}
+
+	#sidecart--button {
+		display: block;
 	}
 
 	#footer-about,
@@ -341,6 +339,51 @@ Media queries
 	#footer-help {
 		margin-right: auto;
 		margin-left: 2rem;
+	}
+
+	#nav--mobile {
+		z-index: 10;
+	}
+
+	#nav--mobile nav a {
+		color: var(--clr-bg-dark);
+		padding: 0.25rem 3rem;
+	}
+
+	#nav--mobile a:is(:hover, :active),
+	.current--mobile {
+		text-decoration: none;
+		background-color: var(--clr-accent-lighter);
+		border-radius: 6px;
+	}
+
+	#mobile--cart--items {
+		color: var(--clr-grey);
+	}
+
+	#mobile--cart--items:is(:hover, :active) {
+		background-color: var(--clr-def) !important;
+		color: var(--clr-bg-middle) !important;
+	}
+
+	#mobile--cart--link:is(:hover, :active) {
+		background-color: var(--clr-accent) !important;
+	}
+
+	.mobile-nav {
+		position: absolute;
+		top: 4.65rem;
+		left: 0;
+		width: 100%;
+		margin: 0 auto;
+		padding: 1.5rem 0;
+		background-color: var(--clr-def);
+		border-radius: 0 0 6px 6px;
+	}
+
+	.checkout-wrapper,
+	.checkout-wrapper:is(:hover, :active) {
+		border: solid var(--clr-bg-dark) 1px;
 	}
 
 	.footer-grid {
@@ -366,7 +409,8 @@ Media queries
 
 /* ----------Tablet + Desktop---------- */
 @media (min-width: 767px) {
-	#menu-mobile {
+	#sidecart--button,
+	#nav--mobile {
 		display: none;
 	}
 
