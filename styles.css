@@ -54,7 +54,7 @@ header {
 	position: sticky;
 	width: 100%;
 	top: 0;
-	/* z-index: 10; */
+	z-index: 10;
 }
 
 body {
@@ -125,10 +125,16 @@ h1 {
 	font-size: 4rem;
 	text-transform: uppercase;
 	letter-spacing: 3px;
+	line-height: 4.5rem;
+	padding-top: 20%;
+}
+
+h1 span {
+	display: block;
 }
 
 h2 {
-	margin-top: 2rem;
+	margin: 5rem auto 1rem auto;
 	font-family: var(--ff-subHeader);
 	font-size: 2rem;
 }
@@ -208,6 +214,43 @@ img {
 	border-radius: 0 6px 6px 0;
 }
 
+/* ----------Hero---------- */
+.hero--img {
+	background-size: cover;
+	min-height: 40vh;
+}
+
+#hero--img-home {
+	background: linear-gradient(to right, #000000, transparent 50%),
+		url("/img/hero/home.jpg") no-repeat top center;
+}
+
+.hero--content {
+	margin-left: 5rem;
+	padding-bottom: 10rem;
+}
+
+.hero--content h2 {
+	margin-top: 1.5rem;
+}
+
+.hero--btn {
+	margin-top: 3rem;
+}
+
+.hero--btn a {
+	padding: 0.5rem 1rem;
+	border: solid var(--clr-def) 2px;
+	border-radius: 3px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--clr-def);
+}
+
+.hero--btn a:is(:hover, :active) {
+	background-color: var(--clr-accent);
+}
+
 /* ----------IDs---------- */
 #footer-logo {
 	grid-area: footer-logo;
@@ -277,7 +320,8 @@ img {
 .cta h2 {
 	font-family: var(--ff-cta);
 	font-size: 2.5rem;
-	margin-bottom: 1.5rem;
+	margin: 0 auto 1.5rem auto;
+	padding: 0;
 }
 
 .copyright {
@@ -288,22 +332,62 @@ img {
 	color: var(--clr-grey);
 }
 
-.diagonal {
+.diagonal--top,
+.diagonal--bottom {
 	/* Suggested by Kevin Powell - https://www.youtube.com/watch?v=hWGgw1K-i8Y */
 	position: relative;
 	isolation: isolate;
-	margin-top: 5rem;
-	padding: 3rem 0;
+	margin: 3rem auto 3rem auto;
+	padding: 2rem 0;
 }
 
-.diagonal::after {
+.diagonal--top-hero {
+	margin: -2rem auto 3rem auto;
+}
+
+.diagonal--top::before {
 	/* Suggested by Kevin Powell - https://www.youtube.com/watch?v=hWGgw1K-i8Y */
 	content: "";
 	background-color: var(--clr-accent);
 	position: absolute;
 	z-index: -1;
 	inset: 0;
-	transform: skewY(5deg);
+	transform: skewY(3deg);
+}
+
+.diagonal--top::after {
+	content: "";
+	background-color: var(--clr-accent);
+	position: absolute;
+	z-index: -1;
+	bottom: 1;
+	left: 0;
+	right: 0;
+	height: 5rem;
+}
+
+.diagonal--bottom::before {
+	content: "";
+	background-color: var(--clr-accent);
+	position: absolute;
+	z-index: -1;
+	top: -2rem;
+	left: 0;
+	right: 0;
+	height: 5rem;
+}
+
+.diagonal--bottom::after {
+	content: "";
+	background-color: var(--clr-accent);
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+	transform: skewY(3deg);
+}
+
+.diagonal--bottom:last-child {
+	padding-bottom: 4rem;
 }
 
 /**********************************************
