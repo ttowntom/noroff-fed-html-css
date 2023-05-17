@@ -345,6 +345,10 @@ Media queries
 		z-index: 10;
 	}
 
+	#nav--mobile ul {
+		padding-inline-start: 0;
+	}
+
 	#nav--mobile nav a {
 		color: var(--clr-bg-dark);
 		padding: 0.25rem 3rem;
