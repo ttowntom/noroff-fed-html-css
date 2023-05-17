@@ -28,6 +28,7 @@ Root variables
 /**********************************************
 Global styles
 **********************************************/
+/* ----------Resets---------- */
 /* Box sizing rules -- Suggested by Andy Bell - https://andy-bell.co.uk/a-modern-css-reset/ */
 *,
 *::before,
@@ -198,18 +199,17 @@ img {
 .checkout--cart a {
 	text-decoration: none;
 	text-transform: uppercase;
-	color: var(--clr-grey);
+	color: var(--clr-def);
 	font-weight: var(--fw-800);
 }
 
-.checkout--sidecart a,
-.checkout--sidecart--mobile a {
-	color: var(--clr-def);
+.checkout--cart a {
+	color: var(--clr-grey);
 }
 
 .checkout--sidecart,
 .checkout--sidecart--mobile {
-	padding: 0.25rem;
+	padding: 0.25rem 0.5rem;
 	background-color: var(--clr-accent);
 	border-radius: 0 6px 6px 0;
 }
@@ -218,11 +218,6 @@ img {
 .hero--img {
 	background-size: cover;
 	min-height: 40vh;
-}
-
-#hero--img-home {
-	background: linear-gradient(to right, #000000, transparent 50%),
-		url("/img/hero/home.jpg") no-repeat top center;
 }
 
 .hero--content {
@@ -234,24 +229,7 @@ img {
 	margin-top: 1.5rem;
 }
 
-.hero--btn {
-	margin-top: 3rem;
-}
-
-.hero--btn a {
-	padding: 0.5rem 1rem;
-	border: solid var(--clr-def) 2px;
-	border-radius: 3px;
-	text-decoration: none;
-	text-transform: uppercase;
-	color: var(--clr-def);
-}
-
-.hero--btn a:is(:hover, :active) {
-	background-color: var(--clr-accent);
-}
-
-/* ----------IDs---------- */
+/* ----------Footer---------- */
 #footer-logo {
 	grid-area: footer-logo;
 	margin: 1.5rem 0;
@@ -278,7 +256,7 @@ img {
 	margin-top: 2rem;
 }
 
-/* ----------Classes---------- */
+/* ----------Utility---------- */
 .marker {
 	width: 100%;
 	border: solid red 4px;
@@ -308,11 +286,16 @@ img {
 	justify-content: space-between;
 }
 
+.center {
+	text-align: center;
+}
+
 .current {
 	text-decoration: underline;
 }
 
-.cta {
+.cta,
+.products--text {
 	max-width: 60ch;
 	margin-inline: auto;
 }
@@ -332,6 +315,31 @@ img {
 	color: var(--clr-grey);
 }
 
+/**********************************************
+Home page (+products page)
+**********************************************/
+.hero--btn {
+	margin-top: 3rem;
+}
+
+.hero--btn a {
+	padding: 0.5rem 1rem;
+	border: solid var(--clr-def) 2px;
+	border-radius: 3px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--clr-def);
+}
+
+.hero--btn a:is(:hover, :active),
+.hero--btn-current {
+	background-color: var(--clr-accent);
+}
+
+.products--text h2 {
+	margin: 0 auto 1.5rem auto;
+	padding: 0;
+}
 .diagonal--top,
 .diagonal--bottom {
 	/* Suggested by Kevin Powell - https://www.youtube.com/watch?v=hWGgw1K-i8Y */
@@ -391,10 +399,6 @@ img {
 }
 
 /**********************************************
-Home page
-**********************************************/
-
-/**********************************************
 Media queries
 **********************************************/
 /* ----------Mobile---------- */
@@ -409,6 +413,7 @@ Media queries
 		display: block;
 	}
 
+	/* ----------Footer---------- */
 	#footer-about,
 	#footer-phone,
 	#footer-email,
@@ -426,6 +431,7 @@ Media queries
 		margin-left: 2rem;
 	}
 
+	/* ----------Navigation---------- */
 	#nav--mobile ul {
 		padding-inline-start: 0;
 	}
@@ -490,6 +496,42 @@ Media queries
 	.container {
 		padding-inline: 0.5rem;
 	}
+
+	/* ----------Hero background images---------- */
+	#hero--img-home {
+		background: linear-gradient(
+				to bottom,
+				hsl(0deg 0% 0% / 70%),
+				transparent 80%
+			),
+			url("/img/hero/home.jpg") no-repeat top center;
+	}
+
+	#hero--img-productsMen {
+		background: linear-gradient(
+				to bottom,
+				hsl(0deg 0% 0% / 70%),
+				transparent 80%
+			),
+			url("/img/hero/productsMen.jpg") no-repeat top center;
+	}
+
+	#hero--img-productsWomen {
+		background: linear-gradient(
+				to bottom,
+				hsl(0deg 0% 0% / 70%),
+				transparent 80%
+			),
+			url("/img/hero/productsWomen.jpg") no-repeat top center;
+	}
+
+	.hero--content {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 auto;
+	}
 }
 
 /* ----------Tablet + Desktop---------- */
@@ -516,5 +558,33 @@ Media queries
 		grid-template-areas:
 			"footer-logo footer-logo footer-logo footer-logo"
 			"footer-about footer-nav footer-help footer-contact";
+	}
+
+	/* ----------Hero background images---------- */
+	#hero--img-home {
+		background: linear-gradient(
+				to right,
+				hsl(0deg 0% 0% / 70%),
+				transparent 50%
+			),
+			url("/img/hero/home.jpg") no-repeat top center;
+	}
+
+	#hero--img-productsMen {
+		background: linear-gradient(
+				to right,
+				hsl(0deg 0% 0% / 70%),
+				transparent 50%
+			),
+			url("/img/hero/productsMen.jpg") no-repeat top center;
+	}
+
+	#hero--img-productsWomen {
+		background: linear-gradient(
+				to right,
+				hsl(0deg 0% 0% / 70%),
+				transparent 50%
+			),
+			url("/img/hero/productsWomen.jpg") no-repeat top center;
 	}
 }
