@@ -281,6 +281,10 @@ input[type="submit"]:is(:hover, :active) {
 }
 
 /* ----------Utility---------- */
+#cta {
+	margin: 6rem auto;
+}
+
 .marker {
 	width: 100%;
 	border: solid red 4px;
@@ -304,6 +308,10 @@ input[type="submit"]:is(:hover, :active) {
 
 .flex--left {
 	justify-content: left;
+}
+
+.flex--right {
+	justify-content: flex-end;
 }
 
 .flex--space-between {
@@ -335,8 +343,26 @@ input[type="submit"]:is(:hover, :active) {
 	margin-bottom: 2rem;
 }
 
+.cta--socials a {
+	background-color: var(--clr-def);
+	border-radius: 50%;
+	padding: 0.5rem;
+	min-height: 3rem;
+	aspect-ratio: 1/1;
+	color: var(--clr-accent);
+}
+
+.cta--socials i {
+	line-height: inherit;
+}
+
+
 .cta form {
 	margin-top: 2rem;
+}
+
+.cta--socials form {
+	margin-top: 0;
 }
 
 .cta input[type="email"] {
@@ -347,7 +373,8 @@ input[type="submit"]:is(:hover, :active) {
 	margin-left: -0.5rem;
 }
 
-.btn--white {
+.btn--white,
+.btn--green {
 	padding: 0.5rem 0.75rem;
 	background-color: var(--clr-def);
 	text-transform: uppercase;
@@ -359,6 +386,15 @@ input[type="submit"]:is(:hover, :active) {
 
 .btn--white:is(:hover, :active) {
 	border-color: var(--clr-grey);
+}
+
+.btn--green {
+	background-color: var(--clr-accent);
+	color: var(--clr-def);
+}
+
+.btn--green:is(:hover, :active) {
+	border-color: var(--clr-def);
 }
 
 .hr {
@@ -592,6 +628,10 @@ Media queries
 		padding-inline: 0.5rem;
 	}
 
+	.flex--stack {
+		flex-direction: column;
+	}
+
 	/* ----------Footer---------- */
 	#footer-about,
 	#footer-phone,
@@ -733,6 +773,10 @@ Media queries
 
 	.container {
 		padding-inline: 1rem;
+	}
+
+	.flex--stack {
+		flex-direction: row;
 	}
 
 	.footer-grid {
