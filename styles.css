@@ -90,6 +90,10 @@ main {
 	background-color: var(--clr-bg-light);
 }
 
+article {
+	width: 100%;
+}
+
 nav li,
 footer li {
 	list-style: none;
@@ -318,6 +322,10 @@ input[type="submit"]:is(:hover, :active) {
 	justify-content: space-between;
 }
 
+.grid-col-span-2 {
+	grid-column: span 2;
+}
+
 .center {
 	text-align: center;
 }
@@ -355,7 +363,6 @@ input[type="submit"]:is(:hover, :active) {
 .cta--socials i {
 	line-height: inherit;
 }
-
 
 .cta form {
 	margin-top: 2rem;
@@ -556,10 +563,18 @@ Home page (+products page)
 Products page (+home page)
 **********************************************/
 /* ----------Products---------- */
+.products--grid {
+	display: grid;
+	gap: 0.25rem;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+}
+
 .product--card {
 	background-color: var(--clr-accent);
 	border: solid var(--clr-bg-light) 2px;
 	height: 600px;
+	width: 100%;
 }
 
 .product--card div:first-of-type {
@@ -745,11 +760,7 @@ Media queries
 
 	/* ----------Featured---------- */
 	.featured--container {
-		grid-template-rows: auto auto auto;
-	}
-
-	.product--card {
-		max-width: 100%;
+		grid-template-rows: auto;
 	}
 
 	/* ----------Reviews---------- */
@@ -817,11 +828,7 @@ Media queries
 	}
 	/* ----------Featured---------- */
 	.featured--container {
-		grid-template-columns: 0.75fr 1fr 0.75fr;
-	}
-
-	.product--card {
-		max-width: 380px;
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 	/* ----------Reviews---------- */
