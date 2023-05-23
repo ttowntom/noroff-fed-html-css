@@ -338,6 +338,7 @@ input[type="submit"]:is(:hover, :active) {
 .products--text {
 	max-width: 60ch;
 	margin-inline: auto;
+	padding-inline: 0.5rem;
 }
 
 .cta h2 {
@@ -566,14 +567,13 @@ Products page (+home page)
 .products--grid {
 	display: grid;
 	gap: 0.25rem;
-	grid-template-columns: repeat(3, 1fr);
 	justify-items: center;
 }
 
 .product--card {
 	background-color: var(--clr-accent);
 	border: solid var(--clr-bg-light) 2px;
-	height: 600px;
+	min-height: 600px;
 	width: 100%;
 }
 
@@ -608,6 +608,10 @@ Products page (+home page)
 	color: var(--clr-def);
 }
 
+.product--card p:first-of-type {
+	min-height: 2.5rem;
+}
+
 .product--card p:last-of-type {
 	text-transform: uppercase;
 	font-weight: var(--fw-600);
@@ -622,7 +626,80 @@ Products page (+home page)
 /**********************************************
 Media queries
 **********************************************/
-/* ----------Mobile---------- */
+/* --------------------Tablet + Desktop-------------------- */
+@media (min-width: 767px) {
+	#sidecart--button,
+	#nav--mobile {
+		display: none;
+	}
+
+	main,
+	.container {
+		width: 100%;
+		max-width: 1170px;
+	}
+
+	.container {
+		padding-inline: 1rem;
+	}
+
+	.flex--stack {
+		flex-direction: row;
+	}
+
+	.footer-grid {
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+			"footer-logo footer-logo footer-logo footer-logo"
+			"footer-about footer-nav footer-help footer-contact";
+	}
+
+	/* ----------Hero background images---------- */
+	#hero--img-home {
+		background: linear-gradient(
+				to right,
+				hsl(0deg 0% 0% / 70%),
+				transparent 50%
+			),
+			url("/img/hero/home.jpg") no-repeat top center;
+	}
+
+	#hero--img-productsMen {
+		background: linear-gradient(
+				to right,
+				hsl(0deg 0% 0% / 70%),
+				transparent 50%
+			),
+			url("/img/hero/productsMen.jpg") no-repeat top center;
+	}
+
+	#hero--img-productsWomen {
+		background: linear-gradient(
+				to right,
+				hsl(0deg 0% 0% / 70%),
+				transparent 50%
+			),
+			url("/img/hero/productsWomen.jpg") no-repeat top center;
+	}
+	/* ----------Featured---------- */
+	.featured--container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	/* ----------Reviews---------- */
+	.reviews--container {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	/* ----------Products---------- */
+	.products--grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* --------------------Mobile-------------------- */
 @media (max-width: 766px) {
 	#nav--desktop,
 	#nav--mobile[data-visible="false"],
@@ -767,72 +844,21 @@ Media queries
 	.reviews--container {
 		grid-template-rows: repeat(4, 1fr);
 	}
-}
 
-/* ----------Tablet + Desktop---------- */
-@media (min-width: 767px) {
-	#sidecart--button,
-	#nav--mobile {
-		display: none;
+	/* ----------Products---------- */
+	#products > article:nth-child(6) {
+		order: 7;
 	}
 
-	main,
-	.container {
-		width: 100%;
-		max-width: 1170px;
+	#products > article:nth-child(7) {
+		order: 6;
 	}
 
-	.container {
-		padding-inline: 1rem;
+	#products > article:nth-child(8) {
+		order: 8;
 	}
 
-	.flex--stack {
-		flex-direction: row;
-	}
-
-	.footer-grid {
-		display: grid;
-		grid-template-columns: auto auto auto auto;
-		grid-template-rows: auto auto;
-		grid-template-areas:
-			"footer-logo footer-logo footer-logo footer-logo"
-			"footer-about footer-nav footer-help footer-contact";
-	}
-
-	/* ----------Hero background images---------- */
-	#hero--img-home {
-		background: linear-gradient(
-				to right,
-				hsl(0deg 0% 0% / 70%),
-				transparent 50%
-			),
-			url("/img/hero/home.jpg") no-repeat top center;
-	}
-
-	#hero--img-productsMen {
-		background: linear-gradient(
-				to right,
-				hsl(0deg 0% 0% / 70%),
-				transparent 50%
-			),
-			url("/img/hero/productsMen.jpg") no-repeat top center;
-	}
-
-	#hero--img-productsWomen {
-		background: linear-gradient(
-				to right,
-				hsl(0deg 0% 0% / 70%),
-				transparent 50%
-			),
-			url("/img/hero/productsWomen.jpg") no-repeat top center;
-	}
-	/* ----------Featured---------- */
-	.featured--container {
-		grid-template-columns: repeat(3, 1fr);
-	}
-
-	/* ----------Reviews---------- */
-	.reviews--container {
-		grid-template-columns: repeat(4, 1fr);
+	#products > article:nth-child(9) {
+		order: 9;
 	}
 }
