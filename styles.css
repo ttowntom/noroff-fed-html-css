@@ -6,6 +6,7 @@ Root variables
 	--clr-accent: #4d8580;
 	--clr-accent-light: #81bab5;
 	--clr-accent-lighter: #d9f0e6;
+	--clr-font-black: #4b4b4b;
 	--clr-grey: #95989a;
 	--clr-bg-accent: #d9f0e6;
 	--clr-bg-light: #373737;
@@ -326,12 +327,28 @@ input[type="submit"]:is(:hover, :active) {
 	justify-content: space-between;
 }
 
+.grid {
+	display: grid;
+}
+
 .grid-col-span-2 {
 	grid-column: span 2;
 }
 
 .center {
 	text-align: center;
+}
+
+.bg--accent {
+	background-color: var(--clr-accent);
+}
+
+.bg--accent-light {
+	background-color: var(--clr-accent-lighter);
+}
+
+.clr--black {
+	color: var(--clr-font-black);
 }
 
 .current {
@@ -624,6 +641,23 @@ Products page (+home page)
 }
 
 /**********************************************
+Product page
+**********************************************/
+/* ----------Product details---------- */
+
+.product--details p {
+	margin-top: 1.5rem;
+}
+
+.product--details ul {
+	padding-inline-start: 1rem;
+}
+
+.product--details ul li::marker {
+	color: var(--clr-accent-lighter);
+}
+
+/**********************************************
 Media queries
 **********************************************/
 /* --------------------Tablet + Desktop-------------------- */
@@ -696,6 +730,16 @@ Media queries
 	/* ----------Products---------- */
 	.products--grid {
 		grid-template-columns: repeat(3, 1fr);
+	}
+
+	/* ----------Product page---------- */
+	.product--details {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.product--details > div {
+		padding-inline: 15%;
+		padding-bottom: 3rem;
 	}
 }
 
@@ -860,5 +904,15 @@ Media queries
 
 	#products > article:nth-child(9) {
 		order: 9;
+	}
+
+	/* ----------Product page---------- */
+	.product--details {
+		grid-template-rows: auto auto;
+	}
+
+	.product--details > div {
+		padding-inline: 1rem;
+		padding-bottom: 3rem;
 	}
 }
