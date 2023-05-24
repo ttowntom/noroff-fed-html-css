@@ -644,7 +644,6 @@ Products page (+home page)
 Product page
 **********************************************/
 /* ----------Product details---------- */
-
 .product--details p {
 	margin-top: 1.5rem;
 }
@@ -655,6 +654,34 @@ Product page
 
 .product--details ul li::marker {
 	color: var(--clr-accent-lighter);
+}
+
+.product--details-features > div:first-of-type {
+	margin-top: 2rem;
+}
+
+.scale {
+	border-radius: 50%;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.scale--wrapper {
+	gap: 0.25rem;
+	margin-top: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.scale--dot {
+	border: 1px solid var(--clr-transparent);
+	background-color: var(--clr-accent-lighter);
+	color: var(--clr-accent);
+	font-weight: var(--fw-600);
+	justify-content: center;
+}
+
+.scale--ring {
+	border: 1px solid var(--clr-accent-lighter);
 }
 
 /**********************************************
@@ -740,6 +767,10 @@ Media queries
 	.product--details > div {
 		padding-inline: 15%;
 		padding-bottom: 3rem;
+	}
+
+	.product--details-features > div:first-of-type {
+		margin-top: 5rem;
 	}
 }
 
