@@ -186,7 +186,6 @@ input[type="submit"]:is(:hover, :active) {
 
 /* ----------Cart / Checkout / Hamburger menu---------- */
 .checkout-wrapper {
-	display: grid;
 	grid-template-columns: max-content max-content;
 	border-radius: 6px;
 	border: solid var(--clr-transparent) 2px;
@@ -549,7 +548,6 @@ Home page (+products page)
 .featured--container {
 	margin-bottom: 5rem;
 	padding: 0 1rem;
-	display: grid;
 	gap: 1.5rem;
 	align-items: center;
 	justify-content: space-around;
@@ -558,7 +556,6 @@ Home page (+products page)
 /* ----------Reviews---------- */
 .reviews--container {
 	margin: 2rem auto 5rem auto;
-	display: grid;
 	grid-auto-rows: 1fr;
 	gap: 0.5rem;
 	align-items: stretch;
@@ -567,7 +564,6 @@ Home page (+products page)
 }
 
 .review--wrapper {
-	display: grid;
 	gap: 0;
 	grid-template-columns: 50px 1fr;
 	background-color: var(--clr-accent);
@@ -607,7 +603,6 @@ Products page (+home page)
 **********************************************/
 /* ----------Products---------- */
 .products--grid {
-	display: grid;
 	gap: 0.25rem;
 	justify-items: center;
 }
@@ -660,6 +655,8 @@ Products page (+home page)
 /**********************************************
 Product page
 **********************************************/
+/* ----------Hero/Gallery---------- */
+
 /* ----------Product details---------- */
 .product--details p {
 	margin-top: 1.5rem;
@@ -726,7 +723,6 @@ Media queries
 	}
 
 	.footer-grid {
-		display: grid;
 		grid-template-columns: auto auto auto auto;
 		grid-template-rows: auto auto;
 		grid-template-areas:
@@ -881,7 +877,6 @@ Media queries
 	}
 
 	.footer-grid {
-		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto auto auto;
 		grid-template-areas:
