@@ -92,8 +92,62 @@
 
 		<!-- ----------Start of main---------- -->
 		<main>
-			<section id="hero"></section>
-			<section id="cta"></section>
+			<nav id="breadcrumbs" class="container">
+				<ul class="flex flex--left">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="productsWomen.html">Women's jackets</a></li>
+					<li><a href="stormChaser.html">Storm Chaser</a></li>
+					<li class="current">Checkout</li>
+				</ul>
+			</nav>
+			<section id="product--info" class="product--details grid">
+				<div class="bg--accent product--details-features">
+					<h1>Checkout</h1>
+					<h2>Shopping cart</h2>
+					<div class="checkout--card grid">
+						<img
+							src="/img/products/stormChaser_onWhite.jpg"
+							alt="Storm Chaser" />
+						<div class="bg--accent-light clr--black grid checkout--card-info">
+							<div class="checkout--card-top">
+								<h3>Storm Chaser</h3>
+								<p>Men's</p>
+							</div>
+							<div class="grid checkout--card-select">
+								<div>
+									<p>Size</p>
+									<div class="select">
+										<select name="size" id="size">
+											<option value="small">S</option>
+											<option value="medium">M</option>
+											<option value="large">L</option>
+											<option value="xlarge">XL</option>
+										</select>
+									</div>
+								</div>
+								<div class="grid grid--right">
+									<p>Quantity</p>
+									<div class="select">
+										<select name="quantity" id="quantity">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="grid checkout--card-bottom">
+								<div><strong>$897</strong></div>
+								<div><i class="fa-solid fa-trash-can float--right"></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bg--accent-light clr--black">
+					<h2>Shipping info</h2>
+				</div>
+			</section>
 		</main>
 
 		<!-- ----------Start of footer---------- -->
