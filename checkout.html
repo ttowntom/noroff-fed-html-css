@@ -124,7 +124,7 @@
 									<div class="select">
 										<select name="size">
 											<option value="small">S</option>
-											<option value="medium">M</option>
+											<option selected="selected" value="medium">M</option>
 											<option value="large">L</option>
 											<option value="xlarge">XL</option>
 										</select>
@@ -136,6 +136,7 @@
 										<select name="quantity">
 											<option value="1">1</option>
 											<option value="2">2</option>
+											<option selected="selected" value="3">3</option>
 											<option value="4">4</option>
 											<option value="5">5</option>
 										</select>
@@ -167,7 +168,7 @@
 									<p>Size</p>
 									<div class="select">
 										<select name="size">
-											<option value="small">S</option>
+											<option selected="selected" value="small">S</option>
 											<option value="medium">M</option>
 											<option value="large">L</option>
 											<option value="xlarge">XL</option>
@@ -178,8 +179,9 @@
 									<p>Quantity</p>
 									<div class="select">
 										<select name="quantity">
-											<option value="1">1</option>
+											<option selected="selected" value="1">1</option>
 											<option value="2">2</option>
+											<option value="3">3</option>
 											<option value="4">4</option>
 											<option value="5">5</option>
 										</select>
@@ -266,7 +268,9 @@
 				<!-- ----------Right/Bottom---------- -->
 				<div class="bg--accent-light clr--black shopping--cart">
 					<h2>Shipping info</h2>
-					<form action="checkoutSuccess.html" class="grid checkout--shipping-form">
+					<form
+						action="checkoutSuccess.html"
+						class="grid checkout--shipping-form">
 						<div>
 							<label for="email">Email</label>
 							<input
@@ -333,30 +337,37 @@
 							</div>
 						</div>
 						<h2>Payment info</h2>
-						<form action="#" class="grid checkout--shipping-form">
-							<div>
-								<label for="creditcard">Credit card number</label>
-								<input
-								id="creditcard" name ="creditcard" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" /> <!-- Suggestion from Stack Overflow: https://stackoverflow.com/questions/48534229/what-is-the-correct-input-type-for-credit-card-numbers --> 	
+						<div>
+							<label for="creditcard">Credit card number</label>
+							<input
+								id="creditcard"
+								name="creditcard"
+								type="tel"
+								inputmode="numeric"
+								pattern="[0-9\s]{13,19}"
+								autocomplete="cc-number"
+								maxlength="19"
+								placeholder="xxxx xxxx xxxx xxxx" />
+							<!-- Suggestion from Stack Overflow: https://stackoverflow.com/questions/48534229/what-is-the-correct-input-type-for-credit-card-numbers -->
+						</div>
+						<div>
+							<label for="name">Cardholders name</label>
+							<input
+								type="text"
+								name="cardholder"
+								id="cardholder"
+								value="Full name" />
+						</div>
+						<div class="flex">
+							<div class="checkout--shipping-form-flex">
+								<label for="zip">Expiry date</label>
+								<input type="date" name="expiry-date" id="expiry-date" />
 							</div>
-							<div>
-								<label for="name">Cardholders name</label>
-								<input
-									type="text"
-									name="cardholder"
-									id="cardholder"
-									value="Full name" />
+							<div class="checkout--shipping-form-flex">
+								<label for="city">CCV</label>
+								<input type="text" name="ccv" id="ccv" value="123" />
 							</div>
-							<div class="flex">
-								<div class="checkout--shipping-form-flex">
-									<label for="zip">Expiry date</label>
-									<input type="date" name="expiry-date" id="expiry-date" />
-								</div>
-								<div class="checkout--shipping-form-flex">
-									<label for="city">CCV</label>
-									<input type="text" name="ccv" id="ccv" value="123" />
-								</div>
-							</div>
+						</div>
 						<div class="right">
 							<input type="submit" value="Pay" />
 						</div>

@@ -297,6 +297,10 @@ select::-ms-expand {
 	color: var(--clr-font-black);
 }
 
+.clr--accent {
+	color: var(--clr-accent);
+}
+
 .current {
 	text-decoration: underline;
 }
@@ -902,6 +906,7 @@ Checkout page
 	color: var(--clr-accent);
 }
 
+/* ----------Shipping info---------- */
 .checkout--shipping-form label {
 	display: block;
 	font-weight: var(--fw-600);
@@ -946,6 +951,49 @@ Checkout page
 
 .shopping--cart h2 {
 	margin-top: 2rem;
+}
+
+/**********************************************
+Checkout success page
+**********************************************/
+/* ----------Left/Top---------- */
+#order-summary h1,
+#order-summary h2 {
+	margin: 0;
+}
+
+#order-summary h2 {
+	margin-top: 1rem;
+}
+
+.checkout--customer-information-wrap {
+	border: 1px solid var(--clr-grey);
+	border-radius: 5px;
+	padding-block: 1rem;
+}
+
+.checkout--customer-information-content {
+	gap: 1rem;
+}
+
+.checkout--customer-information-content p {
+	margin-top: 0.25rem;
+}
+
+.checkout--customer-information-info p:last-of-type {
+	padding-bottom: 1rem;
+}
+
+.creditcard-icon::before {
+	font: var(--fa-font-solid);
+	content: "\f09d";
+	margin-right: 1rem;
+}
+
+.btn--continue {
+	margin-top: 2rem;
+	padding-block: 0.75rem;
+	float: right;
 }
 
 /**********************************************
@@ -1043,6 +1091,11 @@ Media queries
 
 	.checkout--card-info {
 		padding-inline: 2rem;
+	}
+
+	/* ----------Checkout success page---------- */
+	.checkout--customer-information-content {
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
@@ -1225,5 +1278,10 @@ Media queries
 
 	.split-page--spacer {
 		display: none;
+	}
+
+	/* ----------Checkout success page---------- */
+	.checkout--customer-information-content {
+		grid-template-rows: 1fr auto;
 	}
 }
