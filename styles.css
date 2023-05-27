@@ -67,6 +67,9 @@ body {
 	color: var(--clr-def);
 	display: grid;
 	grid-template-rows: auto 1fr auto;
+	accent-color: var(
+		--clr-accent
+	); /* Suggested by bryntum - https://bryntum.com/blog/3-ways-to-style-radio-buttons-with-modern-css/ */
 }
 
 header,
@@ -261,6 +264,14 @@ select::-ms-expand {
 	text-align: center;
 }
 
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
 .float--right {
 	float: right;
 }
@@ -303,7 +314,8 @@ select::-ms-expand {
 	margin-bottom: 2rem;
 }
 
-.cta--socials a {
+.cta--socials a,
+.checkout--card-icon i {
 	background-color: var(--clr-def);
 	border-radius: 50%;
 	padding: 0.5rem;
@@ -757,6 +769,9 @@ Checkout page
 .checkout--card {
 	grid-template-columns: 120px 1fr;
 	border: 1px solid var(--clr-grey);
+	border-radius: 5px;
+	margin-bottom: 1rem;
+	min-height: 9rem;
 }
 
 .checkout--card > div:first-of-type {
@@ -777,25 +792,37 @@ Checkout page
 	margin-top: 0.25rem;
 }
 
+.checkout--card-icon {
+	background-color: var(--clr-accent-light);
+}
+
+.checkout--card-icon i {
+	min-height: 4rem;
+	line-height: 2.85rem; /* I don't love this way of centering the icon... */
+}
+
+.checkout--card-top {
+	margin-bottom: 1rem;
+}
+
 .checkout--card-info {
 	grid-template-rows: repeat(3, auto);
 	align-content: center;
-	padding-inline: 2rem;
+	min-width: 11rem;
 }
 
 .checkout--card-select,
 .checkout--card-bottom {
 	grid-template-columns: 1fr 1fr;
-	justify-items: space-between;
-	margin-block: 1rem;
+	align-items: end;
 }
 
 .checkout--card-bottom {
-	margin-block: 0;
+	margin-block: 1rem;
 }
 
 .checkout--card-bottom strong {
-	font-size: 1.5rem;
+	font-size: 1rem;
 }
 
 .checkout--card-bottom i {
@@ -804,6 +831,19 @@ Checkout page
 
 .checkout--card-bottom i:is(:hover, :active) {
 	cursor: pointer;
+}
+
+.checkout--card-shipping {
+	grid-template-columns: auto auto;
+	align-items: end;
+}
+
+.checkout--card-shipping label {
+	margin-left: -1rem;
+}
+
+.checkout--card-shipping-price {
+	margin-left: 0.5rem;
 }
 
 /**********************************************
@@ -875,7 +915,7 @@ Media queries
 		grid-template-columns: repeat(4, 1fr);
 	}
 
-	/* ----------Products---------- */
+	/* ----------Products page---------- */
 	.products--grid {
 		grid-template-columns: repeat(3, 1fr);
 	}
@@ -892,6 +932,15 @@ Media queries
 
 	.product--details-features > div:first-of-type {
 		margin-top: 5rem;
+	}
+
+	/* ----------Checkout page---------- */
+	.shopping--cart > div:first-of-type {
+		margin-top: 1rem;
+	}
+
+	.checkout--card-info {
+		padding-inline: 2rem;
 	}
 }
 
@@ -1065,5 +1114,10 @@ Media queries
 	.product--details > div {
 		padding-inline: 1rem;
 		padding-bottom: 3rem;
+	}
+
+	/* ----------Checkout page---------- */
+	.checkout--card-info {
+		padding-inline: 0.5rem;
 	}
 }

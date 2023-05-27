@@ -101,9 +101,10 @@
 				</ul>
 			</nav>
 			<section id="product--info" class="product--details grid">
-				<div class="bg--accent product--details-features">
+				<div class="bg--accent product--details-features shopping--cart">
 					<h1>Checkout</h1>
 					<h2>Shopping cart</h2>
+					<!-- ----------Storm Chaser---------- -->
 					<div class="checkout--card grid">
 						<img
 							src="/img/products/stormChaser_onWhite.jpg"
@@ -117,7 +118,7 @@
 								<div>
 									<p>Size</p>
 									<div class="select">
-										<select name="size" id="size">
+										<select name="size">
 											<option value="small">S</option>
 											<option value="medium">M</option>
 											<option value="large">L</option>
@@ -128,7 +129,7 @@
 								<div class="grid grid--right">
 									<p>Quantity</p>
 									<div class="select">
-										<select name="quantity" id="quantity">
+										<select name="quantity">
 											<option value="1">1</option>
 											<option value="2">2</option>
 											<option value="4">4</option>
@@ -138,8 +139,108 @@
 								</div>
 							</div>
 							<div class="grid checkout--card-bottom">
-								<div><strong>$897</strong></div>
-								<div><i class="fa-solid fa-trash-can float--right"></i></div>
+								<div><strong aria-label="Price">$897</strong></div>
+								<div>
+									<i
+										class="fa-solid fa-trash-can float--right"
+										aria-label="Remove from cart"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------City Slicker---------- -->
+					<div class="checkout--card grid">
+						<img
+							src="/img/products/cityslicker_onWhite.jpg"
+							alt="City Slicker" />
+						<div class="bg--accent-light clr--black grid checkout--card-info">
+							<div class="checkout--card-top">
+								<h3>City Slicker</h3>
+								<p>Women's</p>
+							</div>
+							<div class="grid checkout--card-select">
+								<div>
+									<p>Size</p>
+									<div class="select">
+										<select name="size">
+											<option value="small">S</option>
+											<option value="medium">M</option>
+											<option value="large">L</option>
+											<option value="xlarge">XL</option>
+										</select>
+									</div>
+								</div>
+								<div class="grid grid--right">
+									<p>Quantity</p>
+									<div class="select">
+										<select name="quantity">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="grid checkout--card-bottom">
+								<div><strong aria-label="Price">$229</strong></div>
+								<div>
+									<i
+										class="fa-solid fa-trash-can float--right"
+										aria-label="Remove from cart"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------Shipping---------- -->
+					<div class="checkout--card grid">
+						<div class="checkout--card-icon flex center" aria-hidden="true">
+							<i class="fa-solid fa-truck-fast fa-xl"></i>
+						</div>
+						<div class="bg--accent-light clr--black grid checkout--card-info">
+							<div class="checkout--card-top">
+								<h3>Shipping</h3>
+							</div>
+							<div class="grid checkout--card-shipping">
+								<div class="flex flex--left">
+									<input
+										type="radio"
+										name="shipping"
+										value="royal-mail"
+										id="royal-mail"
+										checked="checked" />
+									<label for="royal-mail">Royal Mail</label>
+								</div>
+								<p class="right checkout--card-shipping-price">$21</p>
+								<div class="flex flex--left">
+									<input
+										type="radio"
+										name="shipping"
+										value="express"
+										id="express" />
+									<label for="express">Express</label>
+								</div>
+								<p class="right checkout--card-shipping-price">$44</p>
+							</div>
+						</div>
+					</div>
+					<!-- ----------Summary---------- -->
+					<div class="checkout--card grid">
+						<div class="checkout--card-icon flex center" aria-hidden="true">
+							<i class="fa-solid fa-dollar-sign fa-xl"></i>
+						</div>
+						<div class="bg--accent-light clr--black grid checkout--card-info">
+							<div class="grid checkout--card-shipping">
+								<p>Subtotal</p>
+								<p class="right checkout--card-shipping-price">$1,126</p>
+								<p>Shipping</p>
+								<p class="right checkout--card-shipping-price">+ $21</p>
+								<p>Coupon</p>
+								<p class="right checkout--card-shipping-price">- $20</p>
+							</div>
+							<div class="grid checkout--card-bottom">
+								<div><strong>Total</strong></div>
+								<div><strong class="float--right">$1,127</strong></div>
 							</div>
 						</div>
 					</div>
