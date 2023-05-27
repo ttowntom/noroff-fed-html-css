@@ -340,12 +340,14 @@ select::-ms-expand {
 	width: 50%;
 }
 
-.cta input[type="submit"] {
+.cta input[type="submit"],
+.checkout--coupon input[type="submit"] {
 	margin-left: -0.5rem;
 }
 
 .btn--white,
-.btn--green {
+.btn--green,
+.btn--green-light {
 	padding: 0.5rem 0.75rem;
 	background-color: var(--clr-def);
 	text-transform: uppercase;
@@ -355,7 +357,8 @@ select::-ms-expand {
 	border-radius: 6px;
 }
 
-.btn--white:is(:hover, :active) {
+.btn--white:is(:hover, :active),
+.btn--green-light:is(:hover, :active) {
 	border-color: var(--clr-grey);
 }
 
@@ -366,6 +369,10 @@ select::-ms-expand {
 
 .btn--green:is(:hover, :active) {
 	border-color: var(--clr-def);
+}
+
+.btn--green-light {
+	background-color: var(--clr-accent-lighter);
 }
 
 .select {
@@ -844,6 +851,39 @@ Checkout page
 
 .checkout--card-shipping-price {
 	margin-left: 0.5rem;
+}
+
+.checkout--coupon,
+.checkout--forgot {
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+}
+
+.checkout--coupon form {
+	margin-top: 0.5rem;
+}
+
+.checkout--coupon input[type="submit"] {
+	min-width: 6rem;
+}
+
+.checkout--cuopon-form {
+	grid-template-columns: 1fr auto;
+}
+
+.checkout--forgot p {
+	margin-bottom: 1.25rem;
+}
+
+.checkout--forgot .btn--green-light {
+	padding: 0.75rem;
+}
+
+.checkout--forgot a::before {
+	font: var(--fa-font-solid);
+	content: "\f100";
+	margin-right: 0.5rem;
+	color: var(--clr-accent);
 }
 
 /**********************************************
