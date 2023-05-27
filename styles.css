@@ -533,12 +533,17 @@ select::-ms-expand {
 	text-transform: capitalize;
 }
 
-#breadcrumbs a::after {
+#breadcrumbs a::after,
+#breadcrumbs p::after {
 	font: var(--fa-font-solid);
 	content: "\f105";
 	color: var(--clr-grey);
 	margin-left: 1rem;
 	display: inline-block;
+}
+
+#breadcrumbs p {
+	color: var(--clr-grey);
 }
 
 /**********************************************

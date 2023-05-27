@@ -92,7 +92,50 @@
 
 		<!-- ----------Start of main---------- -->
 		<main>
-			<section id="hero"></section>
+			<nav id="breadcrumbs" class="container">
+				<ul class="flex flex--left">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="productsWomen.html">Women's jackets</a></li>
+					<li><a href="stormChaser.html">Storm Chaser</a></li>
+					<li><p>Checkout</p></li>
+					<li class="current">Checkout confirmation</li>
+				</ul>
+			</nav>
+
+			<section id="order-summary" class="product--details grid">
+				<div class="bg--accent-light clr--black">
+					<h1>Thank you!</h1>
+					<h2>Your order has been confirmed</h2>
+				</div>
+				<div class="bg--accent split-page--spacer"></div>
+
+				<div
+					class="bg--accent-light clr--black product--details-features shopping--cart">
+					<!-- ----------Summary---------- -->
+					<div class="checkout--card grid">
+						<div class="checkout--card-icon flex center" aria-hidden="true">
+							<i class="fa-solid fa-dollar-sign fa-xl"></i>
+						</div>
+						<div class="bg--accent-light clr--black grid checkout--card-info">
+							<div class="grid checkout--card-shipping">
+								<p>Subtotal</p>
+								<p class="right checkout--card-shipping-price">$1,126</p>
+								<p>Shipping</p>
+								<p class="right checkout--card-shipping-price">+ $21</p>
+								<p>Coupon</p>
+								<p class="right checkout--card-shipping-price">- $20</p>
+							</div>
+							<div class="grid checkout--card-bottom">
+								<div><strong>Total</strong></div>
+								<div><strong class="float--right">$1,127</strong></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bg--accent product--details-features shopping--cart">
+					<h2>Customer information</h2>
+				</div>
+			</section>
 			<section id="cta">
 				<div class="cta">
 					<h2>
