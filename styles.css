@@ -132,8 +132,8 @@ footer a {
 h1 {
 	font-family: var(--ff-header);
 	font-size: 4rem;
+	font-weight: var(--fw-400);
 	text-transform: uppercase;
-	letter-spacing: 3px;
 	line-height: 4.5rem;
 	padding-top: 20%;
 }
@@ -174,6 +174,11 @@ input {
 
 input:is(:focus, :active) {
 	border-color: var(--clr-def);
+}
+
+input[type="checkbox"] {
+	border-radius: 5px;
+	margin-left: 0;
 }
 
 input[type="submit"] {
@@ -274,6 +279,10 @@ select::-ms-expand {
 
 .float--right {
 	float: right;
+}
+
+.float--left {
+	float: left;
 }
 
 .bg--accent {
@@ -395,6 +404,7 @@ select::-ms-expand {
 	border-radius: 0 5px 5px 0;
 	padding: 0.5rem 0.25em;
 	background-color: var(--clr-accent);
+	color: var(--clr-def);
 	cursor: pointer;
 	pointer-events: none;
 }
@@ -773,6 +783,7 @@ Product page
 Checkout page
 **********************************************/
 /* ----------Shopping cart---------- */
+
 .checkout--card {
 	grid-template-columns: 120px 1fr;
 	border: 1px solid var(--clr-grey);
@@ -884,6 +895,52 @@ Checkout page
 	content: "\f100";
 	margin-right: 0.5rem;
 	color: var(--clr-accent);
+}
+
+.checkout--shipping-form label {
+	display: block;
+	font-weight: var(--fw-600);
+	margin-top: 1rem;
+	margin-bottom: 0.25rem;
+}
+
+.checkout--shipping-form input {
+	border: 1px solid var(--clr-grey);
+}
+
+.checkout--shipping-form input[type="text"],
+.checkout--shipping-form input[type="email"],
+.checkout--shipping-form input[type="tel"],
+.checkout--shipping-form input[type="number"] {
+	width: 100%;
+}
+
+.checkout--shipping-form input[type="submit"] {
+	margin-top: 1rem;
+	min-width: 8rem;
+}
+
+.checkout--shipping-form h2 {
+	margin: 3rem 0 0.5rem 0;
+}
+
+.checkout--shipping-form-newsletter {
+	margin-top: 0.25rem;
+	margin-bottom: 2rem;
+}
+
+.checkout--shipping-form-newsletter label {
+	display: inline;
+	font-weight: var(--fw-600);
+	font-style: italic;
+}
+
+.checkout--shipping-form-flex {
+	flex: 1;
+}
+
+.shopping--cart h2 {
+	margin-top: 2rem;
 }
 
 /**********************************************
@@ -1159,5 +1216,9 @@ Media queries
 	/* ----------Checkout page---------- */
 	.checkout--card-info {
 		padding-inline: 0.5rem;
+	}
+
+	.split-page--spacer {
+		display: none;
 	}
 }
