@@ -1146,8 +1146,7 @@ Media queries
 	.about--container-top,
 	.about--container-bottom {
 		max-width: 80%;
-
-		grid-template-columns: 30% 1fr;
+		max-width: calc(100% - 10rem);
 	}
 
 	.about--container-top {
