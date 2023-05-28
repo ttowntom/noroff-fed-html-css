@@ -138,7 +138,8 @@ h1 {
 	padding-top: 20%;
 }
 
-h1 span {
+h1 span,
+h2 span {
 	display: block;
 }
 
@@ -490,6 +491,11 @@ select::-ms-expand {
 .hero--img {
 	background-size: cover;
 	min-height: 40vh;
+}
+
+.hero--img-tall {
+	background-size: cover;
+	min-height: 50vh;
 }
 
 .hero--content {
@@ -997,6 +1003,34 @@ Checkout success page
 }
 
 /**********************************************
+About page
+**********************************************/
+.about--container-top h2,
+.about--container-bottom h2 {
+	margin-top: 1.5rem;
+}
+
+.about--container-top h3,
+.about--container-bottom h3 {
+	margin-block: 2rem;
+}
+
+.about--container-top p,
+.about--container-bottom p {
+	margin-top: 0.5rem;
+}
+
+.about--container-top .container,
+.about--container-bottom .container {
+	padding-bottom: 3rem;
+}
+
+.about--logo {
+	margin-top: 3rem;
+	width: 70%;
+}
+
+/**********************************************
 Media queries
 **********************************************/
 /* --------------------Tablet + Desktop-------------------- */
@@ -1055,6 +1089,14 @@ Media queries
 			),
 			url("/img/hero/productsWomen.jpg") no-repeat top center;
 	}
+	#hero--img-about {
+		background: linear-gradient(
+				to right,
+				hsl(0deg 0% 0% / 70%),
+				transparent 50%
+			),
+			url("/img/hero/about.jpg") no-repeat top center;
+	}
 	/* ----------Featured---------- */
 	.featured--container {
 		grid-template-columns: repeat(3, 1fr);
@@ -1096,6 +1138,36 @@ Media queries
 	/* ----------Checkout success page---------- */
 	.checkout--customer-information-content {
 		grid-template-columns: 1fr 1fr;
+	}
+
+	/* ----------About page---------- */
+	.about--container-top,
+	.about--container-bottom {
+		max-width: 80%;
+
+		grid-template-columns: 30% 1fr;
+	}
+
+	.about--container-top {
+		margin: -10rem auto 0 auto;
+		grid-template-columns: 30% 1fr;
+	}
+
+	.about--container-bottom {
+		margin: 5rem auto 0 auto;
+		grid-template-columns: 1fr 30%;
+	}
+
+	#about--welcome-content,
+	#about--history-content {
+		column-count: 2;
+		column-gap: 2rem;
+	}
+
+	.about--container-top > img:first-of-type,
+	.about--container-bottom > img:first-of-type {
+		height: 100%;
+		object-fit: cover;
 	}
 }
 
@@ -1226,6 +1298,15 @@ Media queries
 			url("/img/hero/productsWomen.jpg") no-repeat top center;
 	}
 
+	#hero--img-about {
+		background: linear-gradient(
+				to bottom,
+				hsl(0deg 0% 0% / 70%),
+				transparent 80%
+			),
+			url("/img/hero/about.jpg") no-repeat top center;
+	}
+
 	.hero--content {
 		text-align: center;
 		display: flex;
@@ -1283,5 +1364,24 @@ Media queries
 	/* ----------Checkout success page---------- */
 	.checkout--customer-information-content {
 		grid-template-rows: 1fr auto;
+	}
+
+	/* ----------About page---------- */
+	.about--container-top {
+		margin: 0;
+	}
+
+	.about--container-top img:first-of-type {
+		order: 2;
+	}
+	.about--container-top div:first-of-type {
+		order: 1;
+	}
+
+	.about--container-top > img:first-of-type,
+	.about--container-bottom > img {
+		width: 100%;
+		max-height: 40vh;
+		object-fit: cover;
 	}
 }
