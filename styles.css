@@ -1028,6 +1028,8 @@ About page
 .about--logo {
 	margin-top: 3rem;
 	width: 70%;
+	max-width: 70%;
+	height: clamp(8rem, 10rem, 15rem);
 }
 
 /**********************************************
