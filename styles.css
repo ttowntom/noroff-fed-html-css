@@ -927,8 +927,18 @@ Checkout page
 .checkout--shipping-form input[type="text"],
 .checkout--shipping-form input[type="email"],
 .checkout--shipping-form input[type="tel"],
-.checkout--shipping-form input[type="number"] {
+.checkout--shipping-form input[type="number"],
+.checkout--shipping-form textarea {
 	width: 100%;
+}
+
+.checkout--shipping-form textarea {
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	min-height: 8rem;
+	border-radius: 5px;
+	font-family: var(--ff-def);
+	font-size: 1rem;
 }
 
 .checkout--shipping-form input[type="submit"] {
@@ -1016,7 +1026,8 @@ About page
 }
 
 .about--container-top p,
-.about--container-bottom p {
+.about--container-bottom p,
+.contact--container-top p {
 	margin-top: 1rem;
 }
 
@@ -1030,6 +1041,25 @@ About page
 	width: 70%;
 	max-width: 70%;
 	height: clamp(8rem, 10rem, 15rem);
+}
+
+/**********************************************
+Contact page
+**********************************************/
+.contact--container-top .container {
+	padding-block: 2rem;
+}
+
+.contact--container-top div:first-of-type {
+	margin-top: 0;
+}
+
+.contact--container-top form div:first-of-type {
+	margin-top: -1rem;
+}
+
+.contact--container-top form div:nth-child(4) {
+	margin-top: 2rem;
 }
 
 /**********************************************
@@ -1091,6 +1121,7 @@ Media queries
 			),
 			url("/img/hero/productsWomen.jpg") no-repeat top center;
 	}
+
 	#hero--img-about {
 		background: linear-gradient(
 				to right,
@@ -1098,6 +1129,15 @@ Media queries
 				transparent 50%
 			),
 			url("/img/hero/about.jpg") no-repeat top center;
+	}
+
+	#hero--img-contact {
+		background: linear-gradient(
+				to right,
+				hsl(0deg 0% 0% / 70%),
+				transparent 50%
+			),
+			url("/img/hero/contact.jpg") no-repeat top center;
 	}
 	/* ----------Featured---------- */
 	.featured--container {
@@ -1145,11 +1185,11 @@ Media queries
 	/* ----------About page---------- */
 	.about--container-top,
 	.about--container-bottom {
-		max-width: 80%;
 		max-width: calc(100% - 10rem);
 	}
 
-	.about--container-top {
+	.about--container-top,
+	.contact--container-top {
 		margin: -10rem auto 0 auto;
 		grid-template-columns: 30% 1fr;
 	}
@@ -1169,6 +1209,33 @@ Media queries
 	.about--container-bottom > img:first-of-type {
 		height: 100%;
 		object-fit: cover;
+	}
+
+	/* ----------Contact page---------- */
+	.contact--container-top {
+		max-width: 70%;
+		grid-template-columns: 1fr auto;
+	}
+
+	.contact--container-top form {
+		padding-inline: 1rem;
+	}
+
+	.contact--container-top {
+		align-items: start;
+	}
+
+	.contact--textbox p {
+		margin-top: 0.25rem;
+	}
+
+	.contact--textbox a {
+		color: var(--clr-accent-lighter);
+	}
+
+	.contact--textbox > div:last-of-type {
+		display: block;
+		padding-top: 2rem;
 	}
 }
 
@@ -1306,6 +1373,15 @@ Media queries
 				transparent 80%
 			),
 			url("/img/hero/about.jpg") no-repeat top center;
+	}
+
+	#hero--img-contact {
+		background: linear-gradient(
+				to bottom,
+				hsl(0deg 0% 0% / 70%),
+				transparent 80%
+			),
+			url("/img/hero/contact.jpg") no-repeat top center;
 	}
 
 	.hero--content {

@@ -97,7 +97,72 @@
 
 		<!-- ----------Start of main---------- -->
 		<main>
-			<section id="hero"></section>
+			<section id="hero" class="hero">
+				<div id="hero--img-contact" class="hero--img hero--img-tall">
+					<div class="hero--content">
+						<h1>Contact us</h1>
+						<h2>Let's have a chat over the campfire</h2>
+					</div>
+				</div>
+			</section>
+			<section class="grid contact--container-top">
+				<div class="bg--accent-light clr--black container">
+					<form action="#" class="grid checkout--shipping-form">
+						<div>
+							<label for="name">Full name</label>
+							<input type="text" name="name" id="name" value="Full name" />
+						</div>
+						<div>
+							<label for="email-form">Email</label>
+							<input
+								type="email"
+								name="email-form"
+								id="email-form"
+								value="name@example.com" />
+						</div>
+						<div>
+							<label for="phone">Phone</label>
+							<input
+								type="text"
+								name="phone"
+								id="phone"
+								value="+44 456 678 903" />
+						</div>
+						<div>
+							<label for="subject">Subject</label>
+							<input type="text" name="subject" id="subject" value="Subject" />
+						</div>
+						<div>
+							<label for="message">Message</label>
+							<textarea
+								name="message"
+								id="message"
+								placeholder="Message"></textarea>
+							<div class="right">
+								<input type="submit" value="Send" />
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="bg--accent container contact--textbox">
+					<div>
+						<strong>Opening hours</strong>
+						<div class="flex flex--left flex--space-between">
+							<p>Mon - Fri:</p>
+							<p>07 - 23</p>
+						</div>
+						<div class="flex flex--left flex--space-between">
+							<p>Sat - Sun:</p>
+							<p>13 - 21</p>
+						</div>
+					</div>
+					<div>
+						<strong>Direct</strong>
+						<p aria-label="Phone number">+44 456 678 903</p>
+						<a href="mailto:#">hey@rainydays.com</a>
+					</div>
+				</div>
+			</section>
 			<section id="cta">
 				<div class="cta">
 					<h2>
