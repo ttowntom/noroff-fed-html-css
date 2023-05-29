@@ -1046,20 +1046,40 @@ About page
 /**********************************************
 Contact page
 **********************************************/
-.contact--container-top .container {
-	padding-block: 2rem;
+.contact--container-top {
+	align-items: start;
 }
 
-.contact--container-top div:first-of-type {
-	margin-top: 0;
+.contact--container-top form {
+	padding: 1rem;
 }
 
-.contact--container-top form div:first-of-type {
-	margin-top: -1rem;
-}
-
-.contact--container-top form div:nth-child(4) {
+.contact--container-top form div:nth-child(4),
+.contact--direct {
 	margin-top: 2rem;
+}
+
+.contact--textbox {
+	position: relative;
+	z-index: 3;
+}
+
+.contact--textbox p {
+	margin-top: 0.25rem;
+}
+
+.contact--textbox a {
+	color: var(--clr-accent-lighter);
+}
+
+.contact--container-bottom {
+	margin-top: 5rem;
+}
+
+.contact--map {
+	position: relative;
+	margin-top: -4rem;
+	height: 400px;
 }
 
 /**********************************************
@@ -1217,25 +1237,13 @@ Media queries
 		grid-template-columns: 1fr auto;
 	}
 
-	.contact--container-top form {
-		padding-inline: 1rem;
+	.contact--address {
+		margin-left: calc(30% / 2);
+		width: 20ch;
 	}
 
-	.contact--container-top {
-		align-items: start;
-	}
-
-	.contact--textbox p {
-		margin-top: 0.25rem;
-	}
-
-	.contact--textbox a {
-		color: var(--clr-accent-lighter);
-	}
-
-	.contact--textbox > div:last-of-type {
-		display: block;
-		padding-top: 2rem;
+	.contact--textbox {
+		padding: 2rem;
 	}
 }
 
@@ -1460,5 +1468,29 @@ Media queries
 		width: 100%;
 		max-height: 40vh;
 		object-fit: cover;
+	}
+
+	/* ----------Contact page---------- */
+	.contact--container-top {
+		margin-top: -7rem;
+		gap: 2rem;
+	}
+
+	.contact--container-top > div:first-of-type {
+		order: 2;
+		padding-inline: 1rem;
+	}
+
+	.contact--container-top > div:last-of-type {
+		order: 1;
+	}
+
+	.contact--container-top form {
+		padding: 1rem 0 2rem 0;
+	}
+
+	.contact--textbox {
+		width: 25ch;
+		padding: 2rem;
 	}
 }
