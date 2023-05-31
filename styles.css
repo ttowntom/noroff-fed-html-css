@@ -1468,7 +1468,7 @@ Media queries
 				hsl(0deg 0% 0% / 70%),
 				transparent 80%
 			),
-			url("/img/hero/about.jpg") no-repeat top center;
+			url("/img/hero/about-mobile.jpg") no-repeat top center;
 	}
 
 	#hero--img-contact {
