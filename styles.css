@@ -1458,7 +1458,7 @@ Media queries
 	}
 
 	#hero--img-stormChaser {
-		--background-img: url("/img/products/stormChaser_women_01.jpg");
+		--background-img: url("/img/products/stormChaser_women_01a.jpg");
 		background: var(--background-img) no-repeat center center;
 	}
 
