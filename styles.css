@@ -762,7 +762,7 @@ Product page
 .thumbnails {
 	position: relative;
 	margin-left: 5rem;
-	max-width: 60%;
+	max-width: 85%;
 	flex-wrap: wrap;
 	margin-bottom: -127px;
 	z-index: 3;
@@ -775,8 +775,9 @@ Product page
 	cursor: pointer;
 }
 
-.thumbnails img:active {
+.thumbnails .active {
 	border: 2px solid var(--clr-def);
+	cursor: auto;
 }
 
 .product--spacer {
@@ -1187,12 +1188,14 @@ Media queries
 	}
 
 	#hero--img-stormChaser {
+		--background-img: url("/img/products/stormChaser_women_01a.jpg");
 		background: linear-gradient(
 				to right,
 				hsl(0deg 0% 0% / 70%),
 				transparent 50%
 			),
-			url("/img/products/stormChaser_women_01a.jpg") no-repeat top center;
+			var(--background-img) no-repeat top center;
+		background-size: cover;
 	}
 
 	#hero--img-about {
@@ -1428,12 +1431,13 @@ Media queries
 	}
 
 	#hero--img-stormChaser {
+		--background-img: url("/img/products/stormChaser_women_01a.jpg");
 		background: linear-gradient(
 				to bottom,
 				hsl(0deg 0% 0% / 70%),
 				transparent 80%
 			),
-			url("/img/products/stormChaser_women_01a.jpg") no-repeat top center;
+			var(--background-img) no-repeat top center;
 	}
 
 	#hero--img-about {
