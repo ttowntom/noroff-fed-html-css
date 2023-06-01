@@ -1164,6 +1164,10 @@ Media queries
 			"footer-about footer-nav footer-help footer-contact";
 	}
 
+	.hero--img {
+		min-height: 600px;
+	}
+
 	/* ----------Breadcrumbs---------- */
 	#breadcrumbs a::after,
 	#breadcrumbs p::after {
