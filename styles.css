@@ -1497,6 +1497,10 @@ Media queries
 				transparent 80%
 			),
 			url("/img/hero/home.jpg") no-repeat top center;
+		background-size: cover;
+		min-height: 70vh;
+		display: flex;
+		align-items: center;
 	}
 
 	#hero--img-productsMen {
@@ -1506,6 +1510,10 @@ Media queries
 				transparent 80%
 			),
 			url("/img/hero/productsMen.jpg") no-repeat top center;
+		background-size: cover;
+		min-height: 70vh;
+		display: flex;
+		align-items: center;
 	}
 
 	#hero--img-productsWomen {
@@ -1515,11 +1523,17 @@ Media queries
 				transparent 80%
 			),
 			url("/img/hero/productsWomen.jpg") no-repeat top center;
+		background-size: cover;
+		min-height: 70vh;
+		display: flex;
+		align-items: center;
 	}
 
 	#hero--img-stormChaser {
 		--background-img: url("/img/products/stormChaser_women_01a.jpg");
 		background: var(--background-img) no-repeat center center;
+		background-size: cover;
+		min-height: 50vh;
 	}
 
 	#hero--img-about {
@@ -1529,6 +1543,10 @@ Media queries
 				transparent 80%
 			),
 			url("/img/hero/about-mobile.jpg") no-repeat top center;
+		background-size: cover;
+		min-height: 70vh;
+		display: flex;
+		align-items: center;
 	}
 
 	#hero--img-contact {
@@ -1538,6 +1556,10 @@ Media queries
 				transparent 80%
 			),
 			url("/img/hero/contact.jpg") no-repeat top center;
+		background-size: cover;
+		min-height: 70vh;
+		display: flex;
+		align-items: center;
 	}
 
 	.hero--content {
@@ -1576,9 +1598,6 @@ Media queries
 	}
 
 	/* ----------Product page---------- */
-	#hero--img-stormChaser {
-		min-height: 40vh;
-	}
 
 	.product--grid {
 		gap: 0.25rem;
