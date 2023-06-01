@@ -92,14 +92,18 @@
 
 		<!-- ----------Start of main---------- -->
 		<main>
-			<nav id="breadcrumbs" class="container">
-				<ul class="flex flex--left">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="productsWomen.html">Women's jackets</a></li>
-					<li><a href="stormChaser.html">Storm Chaser</a></li>
-					<li class="current">Checkout</li>
-				</ul>
-			</nav>
+			<div id="breadcrumbs--container" class="flex">
+				<input type="checkbox" id="breadcrumbs--toggle" />
+				<label for="breadcrumbs--toggle" id="breadcrumbs--toggle-label"></label>
+				<nav id="breadcrumbs" class="container">
+					<ul id="breadcrumbs--nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="productsWomen.html">Women's jackets</a></li>
+						<li><a href="stormChaser.html">Storm Chaser</a></li>
+						<li class="current">Checkout</li>
+					</ul>
+				</nav>
+			</div>
 			<section id="product--info" class="product--details grid">
 				<div class="bg--accent product--details-features shopping--cart">
 					<h1>Checkout</h1>
