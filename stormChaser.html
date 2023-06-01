@@ -104,13 +104,17 @@
 
 		<!-- ----------Start of main---------- -->
 		<main>
-			<nav id="breadcrumbs" class="container">
-				<ul class="flex flex--left">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="productsWomen.html">Women's jackets</a></li>
-					<li class="current">Storm Chaser</li>
-				</ul>
-			</nav>
+			<div id="breadcrumbs--container" class="flex">
+				<input type="checkbox" id="breadcrumbs--toggle" />
+				<label for="breadcrumbs--toggle" id="breadcrumbs--toggle-label"></label>
+				<nav id="breadcrumbs" class="container">
+					<ul id="breadcrumbs--nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="productsWomen.html">Women's jackets</a></li>
+						<li class="current">Storm Chaser</li>
+					</ul>
+				</nav>
+			</div>
 			<section id="hero" class="grid product--grid">
 				<div id="hero--img-stormChaser" class="hero--img"></div>
 

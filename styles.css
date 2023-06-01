@@ -556,6 +556,11 @@ select::-ms-expand {
 	color: var(--clr-grey);
 }
 
+#breadcrumbs--nav {
+	display: flex;
+	gap: 0.5rem;
+}
+
 /**********************************************
 Home page (+products page)
 **********************************************/
@@ -1160,6 +1165,24 @@ Media queries
 			"footer-about footer-nav footer-help footer-contact";
 	}
 
+	/* ----------Breadcrumbs---------- */
+	#breadcrumbs a::after,
+	#breadcrumbs p::after {
+		font: var(--fa-font-solid);
+		content: "\f105";
+		color: var(--clr-grey);
+		margin-left: 0.5rem;
+		display: inline-block;
+	}
+
+	#breadcrumbs--toggle {
+		display: none;
+	}
+
+	#breadcrumbs--nav {
+		flex-direction: row;
+	}
+
 	/* ----------Hero background images---------- */
 	#hero--img-home {
 		background: linear-gradient(
@@ -1352,6 +1375,43 @@ Media queries
 	}
 
 	.flex--stack {
+		flex-direction: column;
+	}
+
+	/* ----------Breadcrumbs---------- */
+	#breadcrumbs--container {
+		align-items: start;
+	}
+
+	#breadcrumbs--toggle-label::before {
+		font: var(--fa-font-solid);
+		content: "\f105";
+		color: var(--clr-grey);
+		margin-left: 1rem;
+		display: inline-block;
+
+		padding-top: 1.25rem;
+	}
+
+	#breadcrumbs a::after,
+	#breadcrumbs p::after {
+		content: "";
+	}
+
+	#breadcrumbs--toggle,
+	#breadcrumbs ul li:not(:last-child) {
+		display: none;
+	}
+
+	#breadcrumbs--toggle:checked ~ #breadcrumbs ul li {
+		display: block;
+	}
+
+	#breadcrumbs--toggle:checked ~ #breadcrumbs--toggle-label::before {
+		content: "\f107";
+	}
+
+	#breadcrumbs--nav {
 		flex-direction: column;
 	}
 
