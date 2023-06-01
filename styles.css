@@ -490,7 +490,6 @@ select::-ms-expand {
 /* ----------Hero---------- */
 .hero--img {
 	background-size: cover;
-	min-height: 40vh;
 }
 
 .hero--img-tall {
@@ -1258,9 +1257,6 @@ Media queries
 	}
 
 	/* ----------Product page---------- */
-	#hero--img-stormChaser {
-		min-height: 60vh;
-	}
 
 	.product--grid {
 		position: relative;
@@ -1493,6 +1489,10 @@ Media queries
 	}
 
 	/* ----------Hero background images---------- */
+	.hero--img {
+		min-height: 40vh;
+	}
+
 	#hero--img-home {
 		background: linear-gradient(
 				to bottom,
