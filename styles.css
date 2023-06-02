@@ -676,7 +676,6 @@ Home page (+products page)
 
 .review--main {
 	padding: 1rem 0.5rem;
-	max-width: 35ch;
 }
 
 .review--main img {
@@ -1247,6 +1246,19 @@ Media queries
 	}
 
 	/* ----------Reviews---------- */
+	.reviews--container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+	}
+
+	.review--wrapper {
+		/* max-width: 80%; */
+	}
+
+	.review--main {
+		min-width: 30ch;
+	}
 
 	/* ----------Products page---------- */
 	.products--grid {
@@ -1576,19 +1588,25 @@ Media queries
 	}
 
 	/* ----------Reviews---------- */
-	/* .reviews--container {
-		overflow-x: auto;
-		flex-wrap: nowrap;
-		max-width: 400px;  <---- This is the problem (setting it to 100% breaks the layout)
-	} */
 	.reviews--container {
+		display: flex;
 		overflow-x: auto;
 		flex-wrap: nowrap;
-		max-width: 100%;
+		max-width: 95vw;
+		justify-content: start;
+		padding-bottom: 0.5rem;
 	}
 
-	.review--wrapper {
-		min-width: 35ch;
+	.reviews--container > div:first-of-type {
+		margin-left: 0.5rem;
+	}
+
+	.reviews--container > div:last-of-type {
+		margin-right: 0.5rem;
+	}
+
+	.review--main {
+		min-width: 25ch;
 	}
 
 	/* ----------Products---------- */
