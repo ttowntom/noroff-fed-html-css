@@ -654,11 +654,12 @@ Home page (+products page)
 /* ----------Reviews---------- */
 .reviews--container {
 	margin: 2rem auto 5rem auto;
-	grid-auto-rows: 1fr;
 	gap: 0.5rem;
-	align-items: stretch;
-	justify-content: space-around;
 	color: var(--clr-def);
+
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
 }
 
 .review--wrapper {
@@ -666,8 +667,6 @@ Home page (+products page)
 	grid-template-columns: 50px 1fr;
 	background-color: var(--clr-accent);
 	border-radius: 5px;
-	/* width: 380px; */
-	/* Requires slider function */
 }
 
 .review--left {
@@ -677,6 +676,7 @@ Home page (+products page)
 
 .review--main {
 	padding: 1rem 0.5rem;
+	max-width: 35ch;
 }
 
 .review--main img {
@@ -1134,7 +1134,7 @@ Contact page
 /**********************************************
 Media queries
 **********************************************/
-/* --------------------Tablet + Desktop-------------------- */
+/* ----------------------------------------Tablet + Desktop---------------------------------------- */
 @media (min-width: 767px) {
 	#sidecart--button,
 	#nav--mobile {
@@ -1247,9 +1247,6 @@ Media queries
 	}
 
 	/* ----------Reviews---------- */
-	.reviews--container {
-		grid-template-columns: repeat(4, 1fr);
-	}
 
 	/* ----------Products page---------- */
 	.products--grid {
@@ -1352,7 +1349,7 @@ Media queries
 	}
 }
 
-/* --------------------Mobile-------------------- */
+/* ----------------------------------------Mobile---------------------------------------- */
 @media (max-width: 766px) {
 	#nav--desktop,
 	#nav--mobile[data-visible="false"],
@@ -1579,8 +1576,19 @@ Media queries
 	}
 
 	/* ----------Reviews---------- */
+	/* .reviews--container {
+		overflow-x: auto;
+		flex-wrap: nowrap;
+		max-width: 400px;  <---- This is the problem (setting it to 100% breaks the layout)
+	} */
 	.reviews--container {
-		grid-template-rows: repeat(4, 1fr);
+		overflow-x: auto;
+		flex-wrap: nowrap;
+		max-width: 100%;
+	}
+
+	.review--wrapper {
+		min-width: 35ch;
 	}
 
 	/* ----------Products---------- */
