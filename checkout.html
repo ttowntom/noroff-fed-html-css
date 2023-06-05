@@ -127,7 +127,8 @@
 								<div>
 									<p>Size</p>
 									<div class="select">
-										<select name="size">
+										<label for="size" class="visually-hidden">Size</label>
+										<select id="size" name="size">
 											<option value="small">S</option>
 											<option selected="selected" value="medium">M</option>
 											<option value="large">L</option>
@@ -138,7 +139,10 @@
 								<div class="grid grid--right">
 									<p>Quantity</p>
 									<div class="select">
-										<select name="quantity">
+										<label for="quantity" class="visually-hidden"
+											>Quantity</label
+										>
+										<select id="quantity" name="quantity">
 											<option value="1">1</option>
 											<option value="2">2</option>
 											<option selected="selected" value="3">3</option>
@@ -172,7 +176,8 @@
 								<div>
 									<p>Size</p>
 									<div class="select">
-										<select name="size">
+										<label for="size2" class="visually-hidden">Size</label>
+										<select id="size2" name="size">
 											<option selected="selected" value="small">S</option>
 											<option value="medium">M</option>
 											<option value="large">L</option>
@@ -183,7 +188,10 @@
 								<div class="grid grid--right">
 									<p>Quantity</p>
 									<div class="select">
-										<select name="quantity">
+										<label for="quantity2" class="visually-hidden"
+											>Quantity</label
+										>
+										<select id="quantity2" name="quantity">
 											<option selected="selected" value="1">1</option>
 											<option value="2">2</option>
 											<option value="3">3</option>
@@ -239,6 +247,7 @@
 					<div class="checkout--coupon">
 						<h3>Cuopon code</h3>
 						<form action="#" class="grid checkout--cuopon-form">
+							<label for="cuopon" class="visually-hidden">Cuopon code</label>
 							<input type="text" name="cuopon" id="cuopon" placeholder="Code" />
 							<input type="submit" value="Use" />
 						</form>
@@ -292,7 +301,7 @@
 							>
 						</div>
 						<div>
-							<label for="name">First name</label>
+							<label for="first-name">First name</label>
 							<input
 								type="text"
 								name="first-name"
@@ -300,7 +309,7 @@
 								value="First name" />
 						</div>
 						<div>
-							<label for="name">Last name</label>
+							<label for="last-name">Last name</label>
 							<input
 								type="text"
 								name="last-name"
@@ -308,7 +317,7 @@
 								value="Last name" />
 						</div>
 						<div>
-							<label for="name">Phone</label>
+							<label for="phone">Phone</label>
 							<input
 								type="text"
 								name="phone"
@@ -324,7 +333,7 @@
 								value="Street address" />
 						</div>
 						<div>
-							<label for="country">Apartment, floor, etc.</label>
+							<label for="apartment">Apartment, floor, etc.</label>
 							<input
 								type="text"
 								name="apartment"
@@ -356,7 +365,7 @@
 							<!-- Suggestion from Stack Overflow: https://stackoverflow.com/questions/48534229/what-is-the-correct-input-type-for-credit-card-numbers -->
 						</div>
 						<div>
-							<label for="name">Cardholders name</label>
+							<label for="cardholder">Cardholders name</label>
 							<input
 								type="text"
 								name="cardholder"
@@ -365,11 +374,11 @@
 						</div>
 						<div class="flex">
 							<div class="checkout--shipping-form-flex">
-								<label for="zip">Expiry date</label>
+								<label for="expiry-date">Expiry date</label>
 								<input type="date" name="expiry-date" id="expiry-date" />
 							</div>
 							<div class="checkout--shipping-form-flex">
-								<label for="city">CCV</label>
+								<label for="ccv">CCV</label>
 								<input type="text" name="ccv" id="ccv" value="123" />
 							</div>
 						</div>
