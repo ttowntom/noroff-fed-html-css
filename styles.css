@@ -172,10 +172,14 @@ img {
 input {
 	padding: 0.75rem;
 	font-family: var(--ff-def);
-	color: var(--clr-grey);
+	color: var(--clr-bg-dark);
 	font-size: 1rem;
 	border: solid var(--clr-grey) 2px;
 	border-radius: 6px;
+}
+
+input::placeholder {
+	color: var(--clr-grey);
 }
 
 input:is(:focus, :active) {
