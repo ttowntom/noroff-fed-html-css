@@ -3,7 +3,8 @@ Root variables
 **********************************************/
 :root {
 	--clr-def: #fff;
-	--clr-accent: #4d8580;
+	/* --clr-accent: #4d8580; The original made for too low contrast */
+	--clr-accent: #385c5a;
 	--clr-accent-light: #81bab5;
 	--clr-accent-lighter: #d9f0e6;
 	--clr-font-black: #4b4b4b;
