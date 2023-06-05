@@ -158,6 +158,10 @@ h3 {
 	font-size: 1.25rem;
 }
 
+.strong {
+	font-weight: var(--fw-800);
+}
+
 img {
 	/* Suggested by Kevin Powell - https://www.youtube.com/@KevinPowell */
 	display: block;
@@ -1250,10 +1254,6 @@ Media queries
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		justify-items: center;
-	}
-
-	.review--wrapper {
-		/* max-width: 80%; */
 	}
 
 	.review--main {
