@@ -828,8 +828,8 @@ Product page
 .scale,
 .size {
 	border-radius: 50%;
-	height: 1.5rem;
-	width: 1.5rem;
+	height: 1.75rem;
+	width: 1.75rem;
 }
 
 .scale--wrapper,
@@ -845,7 +845,7 @@ Product page
 	background-color: var(--clr-accent-lighter);
 	color: var(--clr-accent);
 	font-weight: var(--fw-600);
-	justify-content: center;
+	line-height: 1.5rem;
 }
 
 .scale--ring,
@@ -1159,7 +1159,7 @@ Contact page
 .iframe {
 	width: 100%;
 	height: 100%;
-	border: 1px solid var(--clr-bg-dark)
+	border: 1px solid var(--clr-bg-dark);
 	margin: 0;
 }
 
